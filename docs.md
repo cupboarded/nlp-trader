@@ -23,6 +23,14 @@ This is a command-line terminal program that trades cryptocurrency coins using a
 ## Interface
 
 - scraper.py
+    - google_search()
+    - scrape_website()
 - analyzer.py
+    - calc_sentiment()
+    - calc_avg_sentiment()
+- trader.py
+    - invest_req()
+    - sell_req()
 - interface.py
+    - get_coins()
 - main.py
