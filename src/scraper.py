@@ -39,7 +39,7 @@ def google_news_search(coin):
 
 def site_scrape(url):
     """
-    Scrapes the article from the url given
+    Scrapes the article from the url of a website given
 
     Arguments:
         - url: The url of the article
