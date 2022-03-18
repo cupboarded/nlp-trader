@@ -5,6 +5,16 @@ from bs4 import BeautifulSoup
 nlp = spacy.load("en_core_web_sm")
 
 def google_news_search(coin):
+    """
+    Searches the specific coin on google news
+
+    Arguments:
+        - coin: Coin given to be searched
+
+    Return Value:
+        - articles: List of dictionaries, each dictionary contains info about
+                    an article
+    """
     newsapi_key = "f65bfd47eb6e443885fc92bdeb39f860"
 
     curr_date = datetime.datetime.now()
@@ -28,6 +38,15 @@ def google_news_search(coin):
     return articles
 
 def site_scrape(url):
+    """
+    Scrapes the article from the url given
+
+    Arguments:
+        - url: The url of the article
+
+    Return Value:
+        - article_sentences: List of sentences in the article given
+    """
     response = requests.get(url)
     response.encoding = "utf-8"
 
@@ -49,4 +68,3 @@ def site_scrape(url):
 if __name__ == '__main__':
     articles = google_news_search("ethereum")
 
-    site_scrape("https://www.bloomberg.com/news/articles/2022-03-16/bitcoin-jumps-above-41-000-challenging-past-week-s-tight-range")
